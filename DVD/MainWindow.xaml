@@ -1,0 +1,38 @@
+﻿<Window x:Class="DVD.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DVD"
+        mc:Ignorable="d"
+        
+        Title="MainWindow" Height="536" Width="875"
+        MaxHeight="536" MaxWidth="875"
+        MinHeight="536" MinWidth="875">
+    <Grid Margin="0,0,0,-6">
+        <Canvas HorizontalAlignment="Left" Width="926" Height="555" VerticalAlignment="Top">
+            <Ellipse x:Name="WEX" HorizontalAlignment="Center" Height="75" Stroke="White" VerticalAlignment="Center" Width="79">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="C:\Users\Darknes\Downloads\invoker_wex-round (1).png" Stretch="Uniform"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Button Height="6" Canvas.Left="585" Canvas.Top="142" Width="6" RenderTransformOrigin="3.163,0.637" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF1F1C03" Click="Button_Click" BorderBrush="Black">
+                <Border BorderBrush="#FF040000" BorderThickness="1" Background="#FF040000" OpacityMask="#FF040000"/>
+            </Button>
+        </Canvas>
+    </Grid>
+    <Window.Triggers Name="Triger">
+        <EventTrigger RoutedEvent = "Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName = "WEX" Storyboard.TargetProperty = "(Canvas.Left)" From = "-1" To = "788" Duration="0:0:5" RepeatBehavior="Forever" AutoReverse="True"/>
+                    <DoubleAnimation Storyboard.TargetName = "WEX" Storyboard.TargetProperty = "(Canvas.Top)" From = "-1" To = "430" Duration="0:0:3" RepeatBehavior="Forever" AutoReverse="True"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+    <Window.Background>
+        <ImageBrush ImageSource="C:\Users\Darknes\Downloads\1920x1080-px-2-Dota-fantasy-games-Invoker-magic-sorcerer-wizard-1609185.jpg" />
+    </Window.Background>
+
+</Window>
